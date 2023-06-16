@@ -67,3 +67,30 @@ CREATE TABLE service(
     foreign key (retal_type_id) references rental_type(retal_type_id),
     foreign key (service_type_id) references service_type(service_type_id)
 );
+CREATE TABLE contract(
+	contract_id int PRIMARY KEY,
+    date_start_contract DATETIME not null,
+    date_end_contract DATETIME not null,
+    deposits double not null,
+    staff_id int,
+    customer_id int,
+    service_id INT,
+    FOREIGN KEY (staff_id) references staff(staff_id),
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+    FOREIGN KEY (service_id) REFERENCES service(service_id)
+);
+CREATE TABLE include_service (
+	service_id_include int PRIMARY key,
+    service_name_include VARCHAR(45) not null,
+    price double not null,
+    unit varchar(10) not null,
+    `status` varchar(45)
+);
+CREATE table detail_contract(
+	detail_contract_id int PRIMARY KEY,
+    contract_id int,
+    service_id_include int,
+    quanlity INT not null,
+    FOREIGN KEY (contract_id) REFERENCES contract(contract_id),
+    FOREIGN KEY (service_id_include) REFERENCES include_service(service_id_include)
+);
