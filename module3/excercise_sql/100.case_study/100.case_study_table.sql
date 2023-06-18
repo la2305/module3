@@ -21,7 +21,7 @@ CREATE TABLE staff(
     phone_number varchar(45) NOT NULL,
     email VARCHAR(45),
     locaion VARCHAR(45),
-	position int,
+	position_id int,
     specialize_id int,
     department_id int,
     FOREIGN KEY (position) REFERENCES `position`(position),
