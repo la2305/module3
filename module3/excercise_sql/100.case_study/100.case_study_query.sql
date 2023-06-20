@@ -10,7 +10,7 @@ where (full_name like "h%" or full_name like 't%' or full_name like 'k%') and ch
 select customer.customer_id,customer.full_name
 from customer
 where  TIMESTAMPDIFF(year, customer.date_of_birth, CURDATE()) >=18 and TIMESTAMPDIFF(year, customer.date_of_birth, CURDATE()) <=50 
-and (location like '%quảng trị' or location like '%đà nẵng');
+and (customer.location like '%quảng trị' or customer.location like '%đà nẵng');
 
 -- 4.	Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. 
 -- Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng. Chỉ đếm những khách hàng nào có Tên loại khách hàng là “Diamond”.
@@ -144,8 +144,7 @@ join include_service on detail_contract.service_id_include = include_service.ser
 join service on contract.service_id =service.service_id
 join rental_type on service.rental_type_id = rental_type.rental_type_id
 join service_type on service.service_type_id = service_type.service_type_id
-group by include_service.service_name_include
-having count(*) > 2
+WHERE count(include_service.service_name_include) <2
 
 
 -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, ho_ten, ten_trinh_do,
