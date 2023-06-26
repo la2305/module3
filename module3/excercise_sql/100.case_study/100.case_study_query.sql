@@ -281,24 +281,53 @@ from customer;
 
 -- 21.	Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu”
 --  và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
-CREATE view staff as
-SELECT *
+CREATE view v_staff as
+SELECT staff.staff_id, staff.full_name
 from staff
 join contract on staff.staff_id = contract.staff_id 
-where staff.locaion like '%hải châu%' and  DATE(contract.date_start_contract) = '2019-12-12'
+where staff.locaion like '%hải châu%' and  DATE(contract.date_start_contract) = '2019-12-12';
 
 -- 22.	Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành “Liên Chiểu”
 --  đối với tất cả các nhân viên được nhìn thấy bởi khung nhìn này.
-
-
+SET sql_safe_updates = 0;
+update staff
+JOIN v_staff on staff.staff_id =v_staff.staff_id
+set staff.locaion = 'Liên Chiểu';
+SET sql_safe_updates = 0;
 -- 23.	Tạo Stored Procedure sp_xoa_khach_hang dùng để xóa thông tin của một khách hàng nào đó với ma_khach_hang 
 -- được truyền vào như là 1 tham số của sp_xoa_khach_hang.
 
+delimiter //
+create 	PROCEDURE  sp_xoa_khach_hang (in id INT)
+begin
+	SET FOREIGN_KEY_CHECKS = 0;
+	delete from staff
+    where staff.staff_id =id;
+    SET FOREIGN_KEY_CHECKS = 1;
+end//
+delimiter ;
+
+call sp_xoa_khach_hang (10);
 
 -- 24.	Tạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong với yêu cầu sp_them_moi_hop_dong
 --  phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn
 --  tham chiếu đến các bảng liên quan.
-
+delimiter //
+create PROCEDURE sp_them_moi_hop_dong (in p1 int, in p2 DATETIME, in p3 DATETIME, in p4 DOUBLE,in p5 int, in p6 int, in p7 int)
+begin
+	if (p1 not in ( select contract.contract_id from contract )) then
+		if( p5 not in ( select staff.staff_id from staff )) then
+			if (p6 not in ( select customer.customer_id from customer )) then
+				if (p7 not in ( select service.service_id from service )) then
+					INSERT into contract VALUES (p1,p2,p3,p4,p5,p6,p7);
+				end if;
+			end if;
+		end if;
+    end if;
+end//
+delimiter ;
+call sp_them_moi_hop_dong (5, '2020-09-19', '2020-10-10', 150000,5, 5, 5);
+call sp_them_moi_hop_dong (15, '2020-09-19', '2020-10-10', 150000,15, 15, 15);
 
 -- 25.	Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong thì hiển thị tổng số lượng
 --  bản ghi còn lại có trong bảng hop_dong ra giao diện console của database.
