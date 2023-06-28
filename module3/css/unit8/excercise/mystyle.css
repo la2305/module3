@@ -1,0 +1,33 @@
+.row {
+    color: black;
+}
+.row_background{
+    background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/surface-pro-9_multi-color_Pride-english?scl=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+}
+#a{
+    margin-left: 100px ;
+    margin-top: 100px;
+    max-inline-size: 40%;
+    font-size: 40px;
+}
+#b{
+    margin-left: 100px ;
+    margin-top: 20px;
+    max-inline-size: 40%;
+}
+#c{
+    margin-left: 100px ;
+}
+.d{
+    font-size: 40px;
+}
+.e{
+    margin-left: 50px;
+    font-size: 35px;
+}

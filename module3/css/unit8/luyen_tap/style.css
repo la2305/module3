@@ -1,0 +1,19 @@
+ .bgtop1 {
+     background-color: #303030;
+     color: white;
+ }
+ .boxcenter {
+     text-align: center;
+ }
+ .container2{
+     width: 1500px;
+     margin: 0 auto;
+ }
+ section {
+     margin: 50px auto;
+ }
+ .danhmucmuahang img{
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+ }
