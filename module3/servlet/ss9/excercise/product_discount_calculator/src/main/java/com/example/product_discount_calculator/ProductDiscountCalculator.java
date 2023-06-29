@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "product_discount_calculator ", value = "/calculator")
-public class Product_Discount_Calculator extends HttpServlet {
+public class ProductDiscountCalculator extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
