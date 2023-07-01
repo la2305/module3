@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14af2bb0-f13b-46e3-bbbc-10ced66922d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../css/unit8/luyen_tap2/grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss10/excercise/DisplayCustomerListOke/src/main/java/com/example/displaycustomerlistoke/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss10/excercise/DisplayCustomerListOke/src/main/java/com/example/displaycustomerlistoke/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss10/practice/sss1/src/main/webapp/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss10/practice/transfer_money_application/src/main/webapp/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_discount_calculator/src/main/webapp/price.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new/src/main/webapp/price.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../css/unit8/luyen_tap2/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../css/unit8/luyen_tap2/mystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/src/main/java/com/example/product_discount_calculator/ProductDiscountCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../product_discount_calculator/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="2Rv473gGo7ZJ9haDjZpmGLwWlg5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/codegym/_C0323G1_LeQuangPhuoc_module3/module3/servlet/ss9/excercise/ss2/new",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14af2bb0-f13b-46e3-bbbc-10ced66922d7" name="Changes" comment="" />
+      <created>1688117050024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688117050024</updated>
+      <workItem from="1688117051167" duration="35000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

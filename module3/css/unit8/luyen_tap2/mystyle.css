@@ -7,3 +7,14 @@
     text-decoration: none;
     color: white;
 }
+.boxteam  {
+    position: relative;
+}
+
+.boxteam p{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: calc( 100% - 20px);
+    z-index: 222;
+}

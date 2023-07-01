@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Product Discount Calculator</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>JSP - Hello World</title>
 </head>
 <body>
-
+<h1>Danh sách khách hàng</h1>
+<br/>
+<a href="/helloServlet">Click me</a>
 </body>
 </html>

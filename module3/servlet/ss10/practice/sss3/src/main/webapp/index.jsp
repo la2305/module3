@@ -2,10 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Product Discount Calculator</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>JSP - Hello World</title>
 </head>
 <body>
-
+<h1><%= "Hello World!" %>
+</h1>
+<br/>
+<a href="hello-servlet">Hello Servlet</a>
 </body>
 </html>
