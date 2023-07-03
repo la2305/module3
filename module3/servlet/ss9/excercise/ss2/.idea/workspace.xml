@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="14af2bb0-f13b-46e3-bbbc-10ced66922d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../../css/unit8/luyen_tap2/grid.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10/excercise/DisplayCustomerListOke/src/main/java/com/example/displaycustomerlistoke/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10/excercise/DisplayCustomerListOke/src/main/java/com/example/displaycustomerlistoke/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10/practice/sss1/src/main/webapp/converter.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss10/practice/transfer_money_application/src/main/webapp/converter.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product_discount_calculator/src/main/webapp/price.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new/src/main/webapp/price.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../css/unit8/luyen_tap2/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../css/unit8/luyen_tap2/mystyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/src/main/java/com/example/product_discount_calculator/ProductDiscountCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../product_discount_calculator/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../product_discount_calculator/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../css/casestudy/mystyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../css/casestudy/voucher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10/excercise/CalculatorApplication/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss10/excercise/CalculatorApplication/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10/excercise/CalculatorApplication/src/main/java/com/example/calculatorapplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss10/excercise/CalculatorApplication/src/main/java/com/example/calculatorapplication/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10/excercise/DisplayCustomerListOke/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss10/excercise/DisplayCustomerListOke/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +25,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/codegym/_C0323G1_LeQuangPhuoc_module3/module3/servlet/ss9/excercise/ss2/new",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/codegym/_C0323G1_LeQuangPhuoc_module3/module3/servlet/ss9/excercise/ss2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,6 +47,8 @@
       <option name="presentableId" value="Default" />
       <updated>1688117050024</updated>
       <workItem from="1688117051167" duration="35000" />
+      <workItem from="1688285209842" duration="684000" />
+      <workItem from="1688347593127" duration="73000" />
     </task>
     <servers />
   </component>

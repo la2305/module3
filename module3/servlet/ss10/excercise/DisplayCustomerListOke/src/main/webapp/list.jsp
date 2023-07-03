@@ -22,12 +22,13 @@
     </tr>
     <c:forEach var="customer" items="${customerList}">
         <tr>
-            <td><c:out value="${customer.name}"/></td>
+            <td>${customer.name}</td>
             <td><c:out value="${customer.date}"/></td>
             <td><c:out value="${customer.location}"/></td>
-            <td><img src="${n.image}" ></td>
+            <td><img src="${customer.image}" ></td>
         </tr>
     </c:forEach>
+
 </table>
 </body>
 </html>

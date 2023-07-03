@@ -10,7 +10,7 @@ import javax.sql.rowset.serial.SerialException;
 public class HelloServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
+
         float firstOperand = Integer.parseInt(request.getParameter("firstoperand"));
         float secondOperand = Integer.parseInt(request.getParameter("secondoperand"));
         char operator = request.getParameter("operator").charAt(0);
