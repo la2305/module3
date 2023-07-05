@@ -12,13 +12,14 @@ public class UserRespository implements IUserRespository {
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo?useSSL=false";
     private String jdbcUsername = "root";
     private String jdbcPassword = "codegym";
-    private static final String SELECT_ALL_USERS = "select * from users";
+    private static final String SELECT_ALL_USERS = "call select_all()";
     private static final String INSERT_USERS_SQL = "INSERT INTO users (name, email, country) VALUES (?, ?, ?);";
     private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
-    private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
-    private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
+    private static final String DELETE_USERS_SQL = "call delete_user(?)";
+    private static final String UPDATE_USERS_SQL = "call edit_user(?,?,?,?)";
     private static final String ORDER_BY_USERS_SQL = "select * from users order by name";
-    private static final String SELECT_USER_BY_COUNTRY = "select * from users where country like ?;";
+
+
 
 
 
@@ -30,8 +31,8 @@ public class UserRespository implements IUserRespository {
     public List<User> selectAllUsers() {
         List<User> users = new ArrayList<>();
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
-            ResultSet rs = preparedStatement.executeQuery();
+            CallableStatement callableStatement = connection.prepareCall(SELECT_ALL_USERS)) {
+            ResultSet rs = callableStatement.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
@@ -94,20 +95,22 @@ public class UserRespository implements IUserRespository {
     }
     public boolean deleteUser(int id) throws SQLException {
         boolean rowDeleted;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
-            statement.setInt(1, id);
-            rowDeleted = statement.executeUpdate() > 0;
+        try (Connection connection = getConnection();
+             CallableStatement callableStatement = connection.prepareCall(DELETE_USERS_SQL);) {
+            callableStatement.setInt(1, id);
+            rowDeleted = callableStatement.executeUpdate() > 0;
         }
         return rowDeleted;
     }
     public boolean updateUser(User user) throws SQLException {
         boolean rowUpdated;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
-            statement.setString(1, user.getName());
-            statement.setString(2, user.getEmail());
-            statement.setString(3, user.getCountry());
-            statement.setInt(4, user.getId());
-            rowUpdated = statement.executeUpdate() > 0;
+        try (Connection connection = getConnection();
+             CallableStatement callableStatement = connection.prepareCall(UPDATE_USERS_SQL);) {
+            callableStatement.setString(1, user.getName());
+            callableStatement.setString(2, user.getEmail());
+            callableStatement.setString(3, user.getCountry());
+            callableStatement.setInt(4, user.getId());
+            rowUpdated = callableStatement.executeUpdate() > 0;
         }
         return rowUpdated;
     }
@@ -125,6 +128,5 @@ public class UserRespository implements IUserRespository {
         }
         return userList;
     }
-
 
 }

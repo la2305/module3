@@ -15,5 +15,4 @@ public interface IUserRespository {
 
     List<User> oderByUser() throws SQLException;
 
-
 }
