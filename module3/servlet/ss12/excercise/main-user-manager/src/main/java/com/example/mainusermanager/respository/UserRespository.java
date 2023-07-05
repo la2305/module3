@@ -29,7 +29,6 @@ public class UserRespository implements IUserRespository {
         List<User> users = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
-            System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");

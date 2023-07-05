@@ -35,15 +35,7 @@ public class UserService implements IUserService{
         return  iUserRespository.updateUser(user);
     }
 
-    @Override
-    public List<User> searchUser(String country) throws SQLException {
-        List<User> listUser = iUserRespository.selectAllUsers();
-        for (User u : listUser) {
-            if (!country.toLowerCase().contains(u.getCountry().toLowerCase()))
-                listUser.remove(u);
-        }
-        return listUser;
-    }
+
 
     @Override
     public List<User> oderByUser() throws SQLException {

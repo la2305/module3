@@ -17,7 +17,7 @@
   <h2>
     <a href="/users">Back To List</a>
   </h2>
-  <form action="/users?action=search" method="post">
+  <form action="/users?action=search" method="post" style="width: 200px">
     <fieldset>
       <legend>Search</legend>
       <label for="country">Country Name</label> <input type="text" id="country" name="country">
@@ -25,7 +25,7 @@
     </fieldset>
   </form>
 </center>
-<div align="center">
+<div align="center" >
   <table border="1" cellpadding="5">
     <caption><h2>List Of Search</h2></caption>
     <tr>

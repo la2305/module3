@@ -12,7 +12,7 @@ public interface IUserService {
 
     boolean deleteUser(int id) throws SQLException;
     boolean updateUser(User user) throws SQLException;
-    List<User> searchUser(String country) throws SQLException;
+
     List<User> oderByUser() throws SQLException;
 
 

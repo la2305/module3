@@ -69,11 +69,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showSearchUser(HttpServletRequest request, HttpServletResponse response) {
-        try {
-            response.sendRedirect("user/search.jsp");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
@@ -131,22 +127,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void searchUser(HttpServletRequest request, HttpServletResponse response) {
-        String country = request.getParameter("country");
-        List<User> listUser = null;
-        try {
-            listUser = userService.searchUser(country);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        request.setAttribute("listUser", listUser);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/search.jsp");
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     private void updateUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
